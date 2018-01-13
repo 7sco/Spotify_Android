@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Music" android:id="@+id/music"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_music_1"
+         />
+    <item android:title="Search" android:id="@+id/search"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_search"
+       />
+    <item android:title="Playlist" android:id="@+id/playlist"
+        android:enabled="true"
+        android:icon="@drawable/ic_playlist_play"
+        />
+
+</menu>
