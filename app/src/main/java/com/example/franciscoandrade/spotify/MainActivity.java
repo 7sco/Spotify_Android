@@ -1,12 +1,17 @@
 package com.example.franciscoandrade.spotify;
 
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,4 +64,22 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
 
     }
+
+    public class RetrofitCall extends AsyncTask<Void, String, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl("https://newsapi.org/v2/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+            ServiceAPI sportsNewsService = retrofit.create(ServiceAPI.class);
+            sportsNewsService = retrofit.create(ServiceAPI.class);
+
+            return null;
+        }
+    }
+
 }
